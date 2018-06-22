@@ -90,6 +90,7 @@ public class ProvisioningClientIT
     @Parameterized.Parameters(name = "{0}")
     public static Collection inputs()
     {
+        System.out.println("ProvisioingClientIT: Enter BeforeClass!");
         return Arrays.asList(
                 new Object[][]
                 {

@@ -41,6 +41,7 @@ public class ExportImportIT
     @BeforeClass
     public static void setUp() throws URISyntaxException, InvalidKeyException, StorageException, IOException
     {
+        System.out.println("ExportImportIT: Enter BeforeClass!");
         Map<String, String> env = System.getenv();
 
         if (env.containsKey(IOT_HUB_CONNECTION_STRING_ENV_VAR_NAME))

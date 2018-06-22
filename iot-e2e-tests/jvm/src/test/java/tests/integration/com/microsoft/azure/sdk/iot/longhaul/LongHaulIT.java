@@ -66,6 +66,7 @@ public class LongHaulIT
         @BeforeClass
         public static void setUp() throws Exception
         {
+            System.out.println("LongHaulIT: Enter BeforeClass!");
             Map<String, String> env = System.getenv();
             for (String envName : env.keySet())
             {

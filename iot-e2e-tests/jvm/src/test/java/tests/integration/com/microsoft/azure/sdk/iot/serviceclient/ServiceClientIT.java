@@ -28,6 +28,7 @@ public class ServiceClientIT
     @Before
     public void setUp()
     {
+        System.out.println("ServiceClientIT: Enter Before!");
         Map<String, String> env = System.getenv();
         for (String envName : env.keySet())
         {

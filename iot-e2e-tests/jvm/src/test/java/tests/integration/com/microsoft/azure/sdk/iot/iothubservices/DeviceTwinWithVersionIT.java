@@ -154,6 +154,7 @@ public class DeviceTwinWithVersionIT
     @BeforeClass
     public static void setUp() throws Exception
     {
+        System.out.println("DeviceTwinWithIT: Enter BeforeClass!");
         iotHubConnectionString = Tools.retrieveEnvironmentVariableValue(IOT_HUB_CONNECTION_STRING_ENV_VAR_NAME);
 
         // Create a register manager

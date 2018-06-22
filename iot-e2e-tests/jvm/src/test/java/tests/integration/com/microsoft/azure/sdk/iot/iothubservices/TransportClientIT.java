@@ -108,6 +108,7 @@ public class TransportClientIT
     @BeforeClass
     public static void setUp() throws Exception
     {
+        System.out.println("TransportClientIT: Enter BeforeClass!");
         iotHubConnectionString = Tools.retrieveEnvironmentVariableValue(IOT_HUB_CONNECTION_STRING_ENV_VAR_NAME);
 
         registryManager = RegistryManager.createFromConnectionString(iotHubConnectionString);

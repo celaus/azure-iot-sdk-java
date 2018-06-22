@@ -36,6 +36,7 @@ public class RegistryManagerIT
     @BeforeClass
     public static void setUp() throws URISyntaxException, InvalidKeyException, StorageException, IOException
     {
+        System.out.println("RegisterManangerIT: Enter BeforeClass!");
         if (System.getenv().containsKey(IOT_HUB_CONNECTION_STRING_ENV_VAR_NAME))
         {
             iotHubConnectionString = System.getenv().get(IOT_HUB_CONNECTION_STRING_ENV_VAR_NAME);

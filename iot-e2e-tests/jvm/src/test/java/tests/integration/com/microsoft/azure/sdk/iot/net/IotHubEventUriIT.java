@@ -19,6 +19,7 @@ public class IotHubEventUriIT
     @Test
     public void eventUriIsCorrect() throws URISyntaxException
     {
+        System.out.println("IotHubEventUriIT: Enter Test!");
         String iotHubName = "test.iothub";
         String deviceId = "test-deviceid";
         IotHubEventUri uri = new IotHubEventUri(iotHubName, deviceId);

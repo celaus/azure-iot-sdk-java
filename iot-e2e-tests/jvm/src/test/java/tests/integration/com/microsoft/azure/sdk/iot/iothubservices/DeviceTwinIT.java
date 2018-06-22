@@ -288,6 +288,7 @@ public class DeviceTwinIT
     @Parameterized.Parameters(name = "{1} with {2} auth")
     public static Collection setUp() throws Exception
     {
+        System.out.println("DeviceTwinIT: Enter BeforeClass!");
         iotHubConnectionString = Tools.retrieveEnvironmentVariableValue(IOT_HUB_CONNECTION_STRING_ENV_VAR_NAME);
         X509Cert cert = new X509Cert(0, false, "TestLeaf", "TestRoot");
         privateKey =  cert.getPrivateKeyLeafPem();

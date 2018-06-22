@@ -25,6 +25,7 @@ public class HttpsBatchMessageIT
     public void batchMessageSetsFieldsCorrectly() throws
             IotHubSizeExceededException
     {
+        System.out.println("HttpsBatchMessageIT: Enter Test!");
         String msgBytes0 = "abc";
         Message msg0 = new Message(msgBytes0);
         String messageid0 = msg0.getMessageId();

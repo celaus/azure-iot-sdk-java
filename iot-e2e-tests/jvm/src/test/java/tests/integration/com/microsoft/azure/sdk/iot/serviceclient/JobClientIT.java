@@ -96,6 +96,7 @@ public class JobClientIT
     @BeforeClass
     public static void setUp() throws NoSuchAlgorithmException, IotHubException, IOException, URISyntaxException, InterruptedException
     {
+        System.out.println("JobClientIT: Enter BeforeClass!");
         Map<String, String> env = System.getenv();
         for (String envName : env.keySet())
         {

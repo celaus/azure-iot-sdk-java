@@ -124,6 +124,7 @@ public class FileUploadIT
     @BeforeClass
     public static void setUp() throws IOException, NoSuchAlgorithmException, IotHubException, InterruptedException
     {
+        System.out.println("FileUploadIT: Enter BeforeClass!");
         Map<String, String> env = System.getenv();
         for (String envName : env.keySet())
         {

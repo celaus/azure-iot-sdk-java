@@ -17,6 +17,7 @@ public class SignatureIT
     @Test
     public void signatureIsCorrect()
     {
+        System.out.println("SignatureIT: Enter Test!");
         String resourceUri =
                 "sdktesthub.private.azure-devices-int.net/devices/test8";
         String deviceKey =
