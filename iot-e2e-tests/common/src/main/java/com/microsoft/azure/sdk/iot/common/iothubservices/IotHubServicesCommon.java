@@ -335,7 +335,7 @@ public class IotHubServicesCommon
             }
         }
 
-        System.out.println("Successfully opened connection!");
+        //System.out.println("Successfully opened connection!");
     }
 
     public static void openTransportClientWithRetry(TransportClient client)
@@ -362,12 +362,12 @@ public class IotHubServicesCommon
             }
         }
 
-        System.out.println("Successfully opened connection!");
+        //System.out.println("Successfully opened connection!");
     }
 
     public static void waitForStabilizedConnection(List actualStatusUpdates, long timeout) throws InterruptedException
     {
-        System.out.println("Waiting for stabilized connection...");
+        //System.out.println("Waiting for stabilized connection...");
 
         //wait to send the message because we want to ensure that the tcp connection drop happens before the message is received
         long startTime = System.currentTimeMillis();
@@ -398,6 +398,6 @@ public class IotHubServicesCommon
             }
         }
 
-        System.out.println("Connection stabilized!");
+        //System.out.println("Connection stabilized!");
     }
 }

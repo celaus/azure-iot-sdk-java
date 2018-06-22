@@ -362,6 +362,7 @@ public class DeviceTwinIT
     @After
     public void tearDownNewDevice() throws IOException, IotHubException
     {
+        System.out.println("DeviceTwinIT: Enter After!");
         tearDownTwin(deviceUnderTest);
         registryManager.removeDevice(deviceUnderTest.sCDeviceForRegistryManager.getDeviceId());
         try
@@ -372,11 +373,13 @@ public class DeviceTwinIT
         {
             throw new RuntimeException(e);
         }
+        System.out.println("DeviceTwinIT: Finished After!");
     }
 
     @AfterClass
     public static void tearDown() throws IOException, IotHubException
     {
+        System.out.println("DeviceTwinIT: Enter AfterClass!");
         if (registryManager != null)
         {
             registryManager.close();
@@ -385,6 +388,7 @@ public class DeviceTwinIT
         registryManager = null;
         sCDeviceTwin = null;
         deviceClient = null;
+        System.out.println("DeviceTwinIT: Finished AfterClass!");
     }
 
     private int readReportedProperties(DeviceState deviceState, String startsWithKey, String startsWithValue) throws IOException, IotHubException, InterruptedException
