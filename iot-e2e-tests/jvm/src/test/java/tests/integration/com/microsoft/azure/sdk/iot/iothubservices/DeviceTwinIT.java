@@ -363,7 +363,6 @@ public class DeviceTwinIT
     @After
     public void tearDownNewDevice() throws IOException, IotHubException
     {
-        System.out.println("DeviceTwinIT: Enter After!");
         tearDownTwin(deviceUnderTest);
         registryManager.removeDevice(deviceUnderTest.sCDeviceForRegistryManager.getDeviceId());
         try
@@ -374,7 +373,6 @@ public class DeviceTwinIT
         {
             throw new RuntimeException(e);
         }
-        System.out.println("DeviceTwinIT: Finished After!");
     }
 
     @AfterClass

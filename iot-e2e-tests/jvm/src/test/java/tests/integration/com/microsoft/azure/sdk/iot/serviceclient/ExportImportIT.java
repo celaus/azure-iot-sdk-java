@@ -24,6 +24,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.*;
 
+@Ignore
 public class ExportImportIT
 {
     private static String IOT_HUB_CONNECTION_STRING_ENV_VAR_NAME = "IOTHUB_CONNECTION_STRING";
@@ -38,7 +39,8 @@ public class ExportImportIT
 
     private static RegistryManager registryManager;
 
-    @BeforeClass
+
+//    @BeforeClass
     public static void setUp() throws URISyntaxException, InvalidKeyException, StorageException, IOException
     {
         System.out.println("ExportImportIT: Enter BeforeClass!");
@@ -80,7 +82,8 @@ public class ExportImportIT
         importContainer.createIfNotExists();
     }
 
-    @AfterClass
+
+//    @AfterClass
     public static void tearDown() throws Exception
     {
         //Deleting all devices created as a part of the bulk import-export test
@@ -108,6 +111,7 @@ public class ExportImportIT
         }
     }
 
+    @Ignore
     @Test
     public void export_import_e2e() throws Exception
     {
