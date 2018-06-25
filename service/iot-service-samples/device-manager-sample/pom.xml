@@ -57,9 +57,31 @@
         </dependency>
         <dependency>
             <groupId>com.microsoft.azure.sdk.iot</groupId>
+            <artifactId>iot-device-client</artifactId>
+            <version>1.12.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure.sdk.iot</groupId>
             <artifactId>iot-service-client</artifactId>
             <version>1.14.0</version>
-            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure.sdk.iot</groupId>
+            <artifactId>iot-deps</artifactId>
+            <version>0.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.azure.sdk.iot.provisioning</groupId>
+            <artifactId>provisioning-service-client</artifactId>
+            <version>1.3.0</version>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>commicrosoftazure-2424</id>
+            <name>commicrosoftazure-2424</name>
+            <url>https://oss.sonatype.org/content/repositories/commicrosoftazure-2424</url>
+        </repository>
+    </repositories>
+
 </project>

@@ -3,10 +3,12 @@
 
 package samples.com.microsoft.azure.sdk.iot;
 
+import com.microsoft.azure.sdk.iot.deps.twin.DeviceCapabilities;
 import com.microsoft.azure.sdk.iot.provisioning.service.ProvisioningServiceClient;
 import com.microsoft.azure.sdk.iot.provisioning.service.Query;
 import com.microsoft.azure.sdk.iot.provisioning.service.configs.*;
 import com.microsoft.azure.sdk.iot.provisioning.service.exceptions.ProvisioningServiceClientException;
+import com.microsoft.azure.sdk.iot.service.Device;
 
 /**
  * Create, get, query, and delete an individual enrollment on the Microsoft Azure IoT Hub Device Provisioning Service
@@ -46,6 +48,11 @@ public class ServiceEnrollmentSample
         individualEnrollment.setDeviceId(DEVICE_ID);
         individualEnrollment.setIotHubHostName(IOTHUB_HOST_NAME);
         individualEnrollment.setProvisioningStatus(PROVISIONING_STATUS);
+
+        //provisioned device is an edge device
+        DeviceCapabilities deviceCapabilities = new DeviceCapabilities();
+        deviceCapabilities.setIotEdge(true);
+        individualEnrollment.setCapabilities(deviceCapabilities);
 
         // ************************************ Create the individualEnrollment *************************************
         System.out.println("\nAdd new individualEnrollment...");
